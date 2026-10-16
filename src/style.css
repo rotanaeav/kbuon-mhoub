@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Google Sans', sans-serif;
+/* color  */
+  --color-brand-primary: #875c3b;
+  --color-brand-primary-hover: #734c2e;
+  --color-brand-secondary: #eee4d8;
+  --color-bg-page: #f8f4ee;
+  --color-bg-section: #eee4d8;
+  --color-bg-card: #fffdf9;
+  --color-bg-elevated: #fffdf9;
+  --color-bg-sunken: #eee4d8;
+  --color-text-primary: #2e241f;
+  --color-text-secondary: #76675d;
+  --color-text-tertiary: #85756b;
+  --color-text-link: #875c3b;
+  --color-text-on-accent: #ffffff;
+  --color-border-default: #ddd0c4;
+  --color-border-subtle: #e8ded4;
+  --color-badge-fill: #eee4d8;
+  --color-badge-text: #875c3b;
+}
+
+:root {
+  --color-bg-page: #f8f4ee;
+  --color-bg-section: #eee4d8;
+  --color-bg-card: #fffdf9;
+  --color-bg-elevated: #fffdf9;
+  --color-bg-sunken: #eee4d8;
+  --color-text-primary: #2e241f;
+  --color-text-secondary: #76675d;
+  --color-text-tertiary: #85756b;
+  --color-brand-primary: #875c3b;
+  --color-brand-secondary: #eee4d8;
+  --color-border-default: #ddd0c4;
+  --color-border-subtle: #e8ded4;
+}
+
+.dark {
+  --color-bg-page: #1a1614;
+  --color-bg-section: #231e1a;
+  --color-bg-card: #28221d;
+  --color-bg-elevated: #28221d;
+  --color-bg-sunken: #231e1a;
+  --color-text-primary: #f5eee7;
+  --color-text-secondary: #bdaea4;
+  --color-text-tertiary: #998980;
+  --color-brand-primary: #b88358;
+  --color-brand-secondary: #332b24;
+  --color-border-default: #3d342d;
+  --color-border-subtle: #332b25;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-page);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+}
