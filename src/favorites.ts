@@ -156,16 +156,19 @@ function renderSavedRecipes(): void {
     const catName = categoryLabels[recipe.categoryId] ?? "Rice";
     return `
       <article class="relative group w-full bg-bg-card border border-border-subtle rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] hover:border-border-default transition-all duration-300 flex flex-col">
-        <a href="/pages/recipe-detail.html?id=${recipe.id}" class="absolute inset-0 z-0" aria-label="View ${recipe.titleEnglish} recipe"></a>
         <div class="aspect-[4/3] w-full relative overflow-hidden bg-bg-section">
-          <img src="${recipe.image}" alt="${recipe.titleEnglish}" class="w-full h-full object-cover" loading="lazy" />
+          <a href="/pages/recipe-detail.html?id=${recipe.id}" class="block w-full h-full cursor-pointer" aria-label="View ${recipe.titleEnglish} recipe">
+            <img src="${recipe.image}" alt="${recipe.titleEnglish}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          </a>
           <button type="button" data-favorite-id="${recipe.id}" aria-label="Remove ${recipe.titleEnglish} from favorites" class="absolute top-3 right-3 z-10 size-9 rounded-full bg-bg-card/95 backdrop-blur shadow flex items-center justify-center cursor-pointer text-red-500 hover:text-text-secondary transition">
             <i data-lucide="heart" class="size-5 fill-red-500 text-red-500"></i>
           </button>
         </div>
-        <div class="p-4 flex items-center justify-between pointer-events-none mt-auto">
+        <div class="p-4 flex items-center justify-between mt-auto">
           <div>
-            <h3 class="text-xl font-semibold text-text-primary group-hover:text-brand-primary transition leading-7">${recipe.titleEnglish}</h3>
+            <a href="/pages/recipe-detail.html?id=${recipe.id}" class="hover:text-brand-primary transition">
+              <h3 class="text-xl font-semibold text-text-primary group-hover:text-brand-primary transition leading-7">${recipe.titleEnglish}</h3>
+            </a>
             <p class="text-sm text-text-secondary leading-5 mt-0.5">${catName}</p>
           </div>
           <div class="text-sm text-brand-primary font-medium flex items-center gap-1.5 shrink-0">
@@ -196,16 +199,19 @@ function renderRecommendedRecipes(): void {
     const catName = categoryLabels[recipe.categoryId] ?? "Rice";
     return `
       <article class="relative group w-full bg-bg-card border border-border-subtle rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] hover:border-border-default transition-all duration-300 flex flex-col">
-        <a href="/pages/recipe-detail.html?id=${recipe.id}" class="absolute inset-0 z-0" aria-label="View ${recipe.titleEnglish} recipe"></a>
         <div class="aspect-[4/3] w-full relative overflow-hidden bg-bg-section">
-          <img src="${recipe.image}" alt="${recipe.titleEnglish}" class="w-full h-full object-cover" loading="lazy" />
+          <a href="/pages/recipe-detail.html?id=${recipe.id}" class="block w-full h-full cursor-pointer" aria-label="View ${recipe.titleEnglish} recipe">
+            <img src="${recipe.image}" alt="${recipe.titleEnglish}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          </a>
           <button type="button" data-favorite-id="${recipe.id}" aria-label="Save ${recipe.titleEnglish} to favorites" class="absolute top-3 right-3 z-10 size-9 rounded-full bg-bg-card/95 backdrop-blur shadow flex items-center justify-center cursor-pointer transition ${isFav ? "text-red-500" : "text-text-secondary hover:text-red-500"}">
             <i data-lucide="heart" class="size-5 ${isFav ? "fill-red-500 text-red-500" : ""}"></i>
           </button>
         </div>
-        <div class="p-4 flex items-center justify-between pointer-events-none mt-auto">
+        <div class="p-4 flex items-center justify-between mt-auto">
           <div>
-            <h3 class="text-xl font-semibold text-text-primary group-hover:text-brand-primary transition leading-7">${recipe.titleEnglish}</h3>
+            <a href="/pages/recipe-detail.html?id=${recipe.id}" class="hover:text-brand-primary transition">
+              <h3 class="text-xl font-semibold text-text-primary group-hover:text-brand-primary transition leading-7">${recipe.titleEnglish}</h3>
+            </a>
             <p class="text-sm text-text-secondary leading-5 mt-0.5">${catName}</p>
           </div>
           <div class="text-sm text-brand-primary font-medium flex items-center gap-1.5 shrink-0">

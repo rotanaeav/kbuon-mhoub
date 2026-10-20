@@ -145,16 +145,19 @@ function renderPopularRecipes(): void {
     const catName = categoryMap.get(recipe.categoryId) ?? "Khmer";
     return `
       <article class="relative group w-full bg-bg-card border border-border-subtle rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] hover:border-border-default transition-all duration-300 flex flex-col">
-        <a href="/pages/recipe-detail.html?id=${recipe.id}" class="absolute inset-0 z-0" aria-label="View ${recipe.titleEnglish} recipe"></a>
         <div class="aspect-[4/3] w-full relative overflow-hidden bg-bg-section">
-          <img src="${recipe.image}" alt="${recipe.titleEnglish}" class="w-full h-full object-cover" />
+          <a href="/pages/recipe-detail.html?id=${recipe.id}" class="block w-full h-full cursor-pointer" aria-label="View ${recipe.titleEnglish} recipe">
+            <img src="${recipe.image}" alt="${recipe.titleEnglish}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          </a>
           <button type="button" data-favorite-id="${recipe.id}" aria-label="Save ${recipe.titleEnglish} to favorites" class="absolute top-3 right-3 z-10 size-10 rounded-full bg-bg-card/90 backdrop-blur shadow flex items-center justify-center cursor-pointer text-text-secondary hover:text-red-500 transition">
             <i data-lucide="heart" class="size-5"></i>
           </button>
         </div>
-        <div class="p-4 flex items-center justify-between pointer-events-none mt-auto">
+        <div class="p-4 flex items-center justify-between mt-auto">
           <div>
-            <h3 class="text-lg sm:text-xl font-semibold group-hover:text-brand-primary transition">${recipe.titleEnglish}</h3>
+            <a href="/pages/recipe-detail.html?id=${recipe.id}" class="hover:text-brand-primary transition">
+              <h3 class="text-lg sm:text-xl font-semibold group-hover:text-brand-primary transition">${recipe.titleEnglish}</h3>
+            </a>
             <p class="text-base text-text-secondary mt-0.5">${catName}</p>
           </div>
           <div class="text-base text-brand-primary font-medium flex items-center gap-1.5 shrink-0">
@@ -195,7 +198,9 @@ function renderFeaturedSlideshow(): void {
         </a>
       </div>
       <div class="w-full max-w-xs sm:max-w-sm md:w-[320px] lg:w-[400px] aspect-[16/9] sm:aspect-[4/3] rounded-2xl overflow-hidden shadow-sm border border-border-subtle shrink-0 bg-bg-section">
-        <img src="${recipe.image}" alt="${recipe.titleEnglish}" class="w-full h-full object-cover" />
+        <a href="/pages/recipe-detail.html?id=${recipe.id}" class="block w-full h-full cursor-pointer" aria-label="View ${recipe.titleEnglish} recipe">
+          <img src="${recipe.image}" alt="${recipe.titleEnglish}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+        </a>
       </div>
     </div>
   `).join("");
