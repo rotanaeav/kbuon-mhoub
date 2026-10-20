@@ -1,0 +1,83 @@
+[
+  {
+    "id": 101,
+    "titleEnglish": "Samlor Korko",
+    "titleKhmer": "សម្លកកូរ",
+    "title": "Samlor Korko / សម្លកកូរ",
+    "description": "A hearty Khmer stew with vegetables, fragrant kroeung and toasted rice.",
+    "category": "Soup",
+    "categoryId": "soup",
+    "cookTime": "45 min",
+    "ingredientsCount": 8,
+    "ingredients": [
+      "Catfish or pork belly (300g, cut into chunks)",
+      "Green kroeung paste (3 tbsp)",
+      "Roasted ground rice (2 tbsp)",
+      "Green papaya, sliced (1 cup)",
+      "Green pumpkin, cubed (1 cup)",
+      "Long beans, cut into sections (1/2 cup)",
+      "Moringa or bitter gourd leaves (1 cup)",
+      "Fermented fish paste (Prahok, 1 tbsp)"
+    ],
+    "instructions": [
+      "Prepare aromatics. Heat oil in a deep pot and fry prahok with green kroeung paste until fragrant.",
+      "Sear meat. Add fish or pork chunks and stir thoroughly until coated in the fragrant paste.",
+      "Simmer soup. Pour in water or broth, bring to a simmer, then add green papaya, pumpkin, and long beans.",
+      "Thicken and finish. Stir in toasted roasted ground rice and fresh moringa leaves. Simmer for 5 minutes and serve warm."
+    ]
+  },
+  {
+    "id": 102,
+    "titleEnglish": "Nom Banh Chok",
+    "titleKhmer": "នំបញ្ចុក",
+    "title": "Nom Banh Chok / នំបញ្ចុក",
+    "description": "Rice noodles with a fragrant fish curry, fresh herbs and crisp vegetables.",
+    "category": "Rice",
+    "categoryId": "rice",
+    "cookTime": "40 min",
+    "ingredientsCount": 10,
+    "ingredients": [
+      "Fresh fermented rice noodles (500g)",
+      "Freshwater fish fillets (400g)",
+      "Yellow kroeung paste (lemongrass, turmeric, galangal, 4 tbsp)",
+      "Coconut cream (200ml)",
+      "Fish broth or water (600ml)",
+      "Banana flower, thinly shredded (1 cup)",
+      "Cucumber, julienned (1 cup)",
+      "Bean sprouts (1 cup)",
+      "Fresh mint and basil leaves (1/2 cup)",
+      "Prahok and palm sugar (1 tbsp each)"
+    ],
+    "instructions": [
+      "Pound fish paste. Simmer freshwater fish in water, debone, and pound finely with yellow kroeung paste.",
+      "Simmer curry broth. Heat coconut cream gently in a pot, add the pounded fish-kroeung mixture and stir.",
+      "Season broth. Add broth, prahok, and palm sugar; simmer on low heat for 20 minutes.",
+      "Assemble and serve. Place rice noodles in bowls, top with crisp banana blossom, cucumber, herbs, and warm broth."
+    ]
+  },
+  {
+    "id": 103,
+    "titleEnglish": "Num Ansom",
+    "titleKhmer": "នំអន្សម",
+    "title": "Num Ansom / នំអន្សម",
+    "description": "Sweet banana sticky rice, steamed in banana leaves.",
+    "category": "Dessert",
+    "categoryId": "dessert",
+    "cookTime": "90 min",
+    "ingredientsCount": 6,
+    "ingredients": [
+      "Glutinous sticky rice (500g, soaked)",
+      "Ripe baby bananas (Namva, 8 pieces)",
+      "Fresh coconut milk (250ml)",
+      "Grated coconut flesh (1 cup)",
+      "Palm sugar and pinch of salt",
+      "Fresh banana leaves and bamboo twine for wrapping"
+    ],
+    "instructions": [
+      "Prepare sticky rice. Soak rice for 4 hours, drain, and mix with coconut milk, grated coconut, and palm sugar.",
+      "Wrap parcels. Place sticky rice on banana leaves, lay a banana in the center, and cover with more rice.",
+      "Tie tightly. Wrap the banana leaves securely around the rice and bind firmly with bamboo twine.",
+      "Steam parcels. Steam or boil in a large pot for 1.5 to 2 hours until the rice is tender and fragrant."
+    ]
+  }
+]

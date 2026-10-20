@@ -1,0 +1,464 @@
+[
+  {
+    "id": 1,
+    "titleEnglish": "Fish Amok",
+    "titleKhmer": "អាម៉ុកត្រី",
+    "categoryId": "rice",
+    "prepTime": "15 min",
+    "cookTime": "25 min",
+    "servings": 4,
+    "description": "A classic Khmer steamed fish curry with coconut milk and aromatic kroeung.",
+    "image": "/images/recipes/Fish-amok.webp",
+    "ingredients": [
+      "500 g white fish, sliced",
+      "2 cups coconut milk",
+      "3 tbsp kroeung paste",
+      "1 tbsp fish sauce",
+      "1 egg, beaten",
+      "Banana leaves, for serving"
+    ],
+    "instructions": [
+      "Slice the fish and gather the remaining ingredients. Set aside the banana leaves.",
+      "Combine coconut milk, kroeung, fish sauce and egg in a bowl. Stir until smooth.",
+      "Fold the banana leaves into cups. Add the fish to the curry mixture and divide among the cups. Steam over simmering water for 25 minutes, until the fish is cooked and the curry is just set.",
+      "Carefully lift the banana-leaf cups from the steamer. Serve the amok warm in its leaves, with steamed rice alongside."
+    ],
+    "methodSteps": [
+      {
+        "title": "Prepare the ingredients",
+        "description": "Slice the fish and gather the remaining ingredients. Set aside the banana leaves."
+      },
+      {
+        "title": "Mix the base",
+        "description": "Combine coconut milk, kroeung, fish sauce and egg in a bowl. Stir until smooth."
+      },
+      {
+        "title": "Fill and steam",
+        "description": "Fold the banana leaves into cups. Add the fish to the curry mixture and divide among the cups. Steam over simmering water for 25 minutes, until the fish is cooked and the curry is just set."
+      },
+      {
+        "title": "Serve warm",
+        "description": "Carefully lift the banana-leaf cups from the steamer. Serve the amok warm in its leaves, with steamed rice alongside."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "titleEnglish": "Beef Lok Lak",
+    "titleKhmer": "ឡុកឡាក់សាច់គោ",
+    "categoryId": "rice",
+    "cookTime": "30 min",
+    "servings": 2,
+    "description": "Tender marinated stir-fried beef cubes served with fresh lettuce, tomatoes, and Kampot black pepper lime sauce.",
+    "image": "/images/recipes/beef_loklak.jpg",
+    "ingredients": [
+      "400g beef tenderloin, cut into bite-sized cubes",
+      "2 tbsp oyster sauce",
+      "1 tbsp soy sauce",
+      "1 tbsp tomato paste",
+      "1 tsp sugar",
+      "3 cloves garlic, minced",
+      "Fresh lettuce leaves and tomato slices",
+      "Kampot black pepper and fresh lime juice for dipping"
+    ],
+    "instructions": [
+      "Marinate beef cubes with oyster sauce, soy sauce, tomato paste, garlic, and sugar for at least 20 minutes.",
+      "Arrange fresh crisp lettuce and sliced tomatoes on a serving platter.",
+      "Heat a wok over high heat with oil, then flash-fry the beef in batches for 2 to 3 minutes until seared on the outside and tender inside.",
+      "Transfer hot beef over the bed of vegetables. Serve immediately with warm rice and a small bowl of Kampot pepper lime sauce."
+    ]
+  },
+  {
+    "id": 3,
+    "titleEnglish": "Samlor Korko",
+    "titleKhmer": "សម្លកកូរ",
+    "categoryId": "soup",
+    "cookTime": "45 min",
+    "servings": 4,
+    "description": "Cambodia's beloved hearty vegetable and fish soup simmered with green kroeung, fermented fish, and roasted ground rice.",
+    "image": "/images/recipes/korko.jpeg",
+    "ingredients": [
+      "300g catfish or river fish fillets",
+      "3 tbsp green kroeung paste",
+      "1 tbsp fermented fish paste (prahok)",
+      "2 tbsp roasted ground rice (prahok kroeung)",
+      "1 cup green papaya, shredded",
+      "1 cup green pumpkin, cubed",
+      "1 cup long beans and baby eggplants",
+      "1 cup mixed bitter gourd leaves and moringa leaves"
+    ],
+    "instructions": [
+      "Dissolve prahok in simmering water to make a flavorful broth base, discarding any solids.",
+      "In a soup pot, fry kroeung paste with fish pieces until aromatic, then pour in the strained broth.",
+      "Add green pumpkin, papaya, and eggplants, simmering until tender.",
+      "Stir in roasted ground rice to thicken the soup, then fold in leafy greens and season with fish sauce. Serve piping hot."
+    ]
+  },
+  {
+    "id": 4,
+    "titleEnglish": "Nom Banh Chok",
+    "titleKhmer": "នំបញ្ចុក",
+    "categoryId": "rice",
+    "cookTime": "40 min",
+    "servings": 4,
+    "description": "Handcrafted fermented rice noodles topped with a rich lemongrass fish gravy, crisp cucumbers, and wild edible herbs.",
+    "image": "/images/recipes/nom_banh_chok.jpg",
+    "ingredients": [
+      "500g fresh fermented rice noodles (Nom Banh Chok)",
+      "400g freshwater fish, boiled and flaked",
+      "4 tbsp yellow kroeung paste",
+      "2 cups coconut milk",
+      "1 tbsp prahok, minced",
+      "Thinly sliced banana blossoms and cucumbers",
+      "Water lily stems and fresh mint leaves"
+    ],
+    "instructions": [
+      "Pound flaked boiled fish together with yellow kroeung paste in a mortar until a smooth paste forms.",
+      "Simmer coconut milk in a pot, add minced prahok and the pounded fish mixture, and cook until rich and fragrant.",
+      "Place fresh rice noodles into individual serving bowls.",
+      "Ladle warm coconut fish gravy generously over the noodles and serve accompanied by a platter of crisp fresh herbs and vegetables."
+    ]
+  },
+  {
+    "id": 5,
+    "titleEnglish": "Bai Sach Chrouk",
+    "titleKhmer": "បាយសាច់ជ្រូក",
+    "categoryId": "rice",
+    "cookTime": "35 min",
+    "servings": 2,
+    "description": "Thinly sliced pork marinated in garlic and coconut milk, chargrilled to perfection and served over steamed jasmine rice.",
+    "image": "/images/recipes/bay-chruk.jpeg",
+    "ingredients": [
+      "350g pork shoulder, thinly sliced",
+      "3 tbsp coconut milk",
+      "4 cloves garlic, crushed",
+      "1 tbsp soy sauce",
+      "1 tbsp palm sugar",
+      "Steamed jasmine rice",
+      "Pickled cucumber, daikon, and carrots",
+      "Clear scallion broth on the side"
+    ],
+    "instructions": [
+      "Marinate pork slices in coconut milk, crushed garlic, soy sauce, and palm sugar for 30 minutes.",
+      "Grill pork over medium charcoal embers until caramelized with slight char on the edges.",
+      "Mound hot jasmine rice on plates and lay sliced grilled pork on top.",
+      "Serve alongside sweet and sour pickled cucumbers and a small bowl of light scallion broth."
+    ]
+  },
+  {
+    "id": 6,
+    "titleEnglish": "Mango Sticky Rice",
+    "titleKhmer": "បាយដំណើបស្វាយ",
+    "categoryId": "dessert",
+    "cookTime": "30 min",
+    "servings": 3,
+    "description": "Sweet coconut sticky rice paired with ripe Cambodian Keo Romeat mango slices and toasted sesame seeds.",
+    "image": "/images/recipes/MangoRice.webp",
+    "ingredients": [
+      "2 cups glutinous sticky rice, soaked 3 hours",
+      "1.5 cups coconut cream",
+      "0.5 cup palm sugar or white sugar",
+      "0.5 tsp salt",
+      "2 ripe sweet mangoes (Keo Romeat), peeled and sliced",
+      "1 tbsp toasted sesame seeds"
+    ],
+    "instructions": [
+      "Steam soaked sticky rice in a bamboo steamer for 20 to 25 minutes until translucent and tender.",
+      "Warm coconut cream with sugar and salt in a saucepan until dissolved.",
+      "Pour warm coconut cream over steamed sticky rice, cover, and let rest for 15 minutes to absorb.",
+      "Serve sticky rice beside sliced sweet mango, drizzled with coconut cream and sprinkled with toasted sesame."
+    ]
+  },
+  {
+    "id": 7,
+    "titleEnglish": "Fried Egg",
+    "titleKhmer": "ពងទាចៀន",
+    "categoryId": "rice",
+    "cookTime": "10 min",
+    "servings": 1,
+    "description": "Crispy-edged sunny-side fried duck egg served over steaming hot jasmine rice with soy sauce and fresh chili.",
+    "image": "/images/recipes/egg.png",
+    "ingredients": [
+      "2 fresh duck or chicken eggs",
+      "2 tbsp cooking oil",
+      "1 cup hot steamed jasmine rice",
+      "1 tbsp light soy sauce",
+      "1 fresh bird's eye chili, sliced"
+    ],
+    "instructions": [
+      "Heat oil in a wok or skillet over medium-high heat until hot.",
+      "Crack egg gently into hot oil, spooning oil over egg whites to create crispy golden edges while keeping yolk runny.",
+      "Slide fried egg over steaming hot jasmine rice.",
+      "Drizzle with light soy sauce and sliced fresh chilies for a quick, comforting meal."
+    ]
+  },
+  {
+    "id": 8,
+    "titleEnglish": "Minced Pork Omelet",
+    "titleKhmer": "ពងទាចៀនសាច់ជ្រូកចិញ្ច្រាំ",
+    "categoryId": "rice",
+    "cookTime": "15 min",
+    "servings": 2,
+    "description": "Golden fluffy duck egg omelet loaded with seasoned minced pork, green onions, and garlic.",
+    "image": "/images/recipes/Minced-pork.jpg",
+    "ingredients": [
+      "3 eggs",
+      "100g minced pork",
+      "2 stalks green scallions, chopped",
+      "1 clove garlic, minced",
+      "1 tsp fish sauce",
+      "A pinch of white pepper and sugar"
+    ],
+    "instructions": [
+      "Beat eggs in a bowl with fish sauce, white pepper, and minced garlic.",
+      "Stir in minced pork and green scallions, mixing thoroughly.",
+      "Heat oil in a skillet, pour in the egg mixture, and fry until bottom is golden brown.",
+      "Carefully flip and cook the other side until cooked through and puffed. Serve with steamed rice."
+    ]
+  },
+  {
+    "id": 9,
+    "titleEnglish": "Khmer Fried Rice",
+    "titleKhmer": "បាយឆាខ្មែរ",
+    "categoryId": "rice",
+    "cookTime": "20 min",
+    "servings": 2,
+    "description": "Wok-fried fragrant rice tossed with garlic, vegetables, egg, sweet Chinese sausage, and soy sauce.",
+    "image": "/images/recipes/Khmer-Fried-Rice.jpg",
+    "ingredients": [
+      "3 cups cooked jasmine rice, chilled overnight",
+      "2 links sweet Chinese sausage, sliced",
+      "2 eggs, lightly beaten",
+      "1 carrot, finely diced",
+      "2 cloves garlic, minced",
+      "2 tbsp soy sauce",
+      "Chopped scallions and cilantro"
+    ],
+    "instructions": [
+      "Render sliced sausage in a hot wok, then remove and set aside.",
+      "Scramble eggs lightly in the flavorful oil, then remove.",
+      "Fry garlic and carrots, toss in cold rice, breaking up clumps with a spatula.",
+      "Season with soy sauce, return sausage and egg to wok, and toss over high heat with green onions."
+    ]
+  },
+  {
+    "id": 10,
+    "titleEnglish": "Stir-fried Morning Glory",
+    "titleKhmer": "ឆាត្រកួនប្រេងខ្យង",
+    "categoryId": "khmer",
+    "cookTime": "15 min",
+    "servings": 2,
+    "description": "Crisp water spinach flash-fried in a hot wok with fermented soybean paste, crushed garlic, and oyster sauce.",
+    "image": "/images/recipes/Stir-Morning-Glory.webp",
+    "ingredients": [
+      "300g fresh morning glory (water spinach), cut into lengths",
+      "4 cloves garlic, crushed",
+      "1 tbsp fermented soybean paste",
+      "1 tbsp oyster sauce",
+      "1 fresh red chili, sliced",
+      "2 tbsp oil"
+    ],
+    "instructions": [
+      "Heat oil in a wok until smoking hot.",
+      "Add crushed garlic, fermented soybean paste, and chili, stirring quickly for 10 seconds.",
+      "Toss in morning glory and oyster sauce, stir-frying vigorously over high heat for 1 to 2 minutes until tender-crisp.",
+      "Transfer to a plate and serve immediately with jasmine rice."
+    ]
+  },
+  {
+    "id": 11,
+    "titleEnglish": "Somlor Mju Trey",
+    "titleKhmer": "សម្លម្ជូរត្រី",
+    "categoryId": "soup",
+    "cookTime": "30 min",
+    "servings": 4,
+    "description": "Authentic sweet and sour fish soup flavored with fresh ripe tamarind, water spinach, and morning herbs.",
+    "image": "/images/recipes/mju-trey.png",
+    "ingredients": [
+      "400g fresh river fish cutlets",
+      "2 tbsp tamarind pulp, soaked and strained",
+      "1 tbsp prahok",
+      "1 cup water spinach stems and lotus root",
+      "1 tomato, cut into wedges",
+      "Rice paddy herb (Ma-om) and saw-leaf coriander",
+      "Fish sauce and palm sugar to balance"
+    ],
+    "instructions": [
+      "Bring water to a boil with strained prahok and tamarind juice.",
+      "Add fish cutlets and simmer gently until cooked through without stirring roughly.",
+      "Add vegetables and tomatoes, simmering for 3 minutes.",
+      "Turn off heat, stir in fresh aromatic rice paddy herbs, and serve hot."
+    ]
+  },
+  {
+    "id": 12,
+    "titleEnglish": "Chha Kdao Chicken",
+    "titleKhmer": "ឆាក្តៅសាច់មាន់",
+    "categoryId": "khmer",
+    "cookTime": "25 min",
+    "servings": 3,
+    "description": "Spicy lemongrass stir-fried chicken with holy basil, garlic, fingerroot, and fresh bird's eye chilies.",
+    "image": "/images/recipes/cha_kdao.png",
+    "ingredients": [
+      "400g chicken thighs, chopped into bite-sized pieces",
+      "3 tbsp yellow kroeung paste",
+      "1 cup fresh holy basil leaves",
+      "2 fresh red chilies, crushed",
+      "1 tbsp fingerroot, julienned",
+      "1 tbsp fish sauce",
+      "1 tsp palm sugar"
+    ],
+    "instructions": [
+      "Heat oil in a wok and fry kroeung paste and fingerroot until fragrant.",
+      "Add chopped chicken pieces and stir-fry until seared on all sides.",
+      "Season with fish sauce, palm sugar, and fresh chilies, cooking until chicken is cooked through.",
+      "Toss in holy basil leaves, stir for 15 seconds until wilted, and transfer to a serving plate."
+    ]
+  },
+  {
+    "id": 13,
+    "titleEnglish": "Num Pang Pâté",
+    "titleKhmer": "នំប៉័ងប៉ាតេ",
+    "categoryId": "snack",
+    "cookTime": "15 min",
+    "servings": 1,
+    "description": "Crispy toasted French baguette filled with savory liver pâté, pickled papaya, cucumbers, and cilantro.",
+    "image": "/images/recipes/patte.jpg",
+    "ingredients": [
+      "1 crisp French baguette",
+      "2 tbsp savory pork liver pâté",
+      "2 tbsp mayonnaise or sweet garlic butter",
+      "50g sliced cha lua (pork roll) or ham",
+      "Pickled green papaya and carrots",
+      "Cucumber slices and fresh cilantro"
+    ],
+    "instructions": [
+      "Warm and toast baguette until outer crust is delightfully crisp.",
+      "Slice lengthwise and spread with garlic butter and rich liver pâté.",
+      "Layer with sliced meats, cucumber ribbons, pickled papaya, and sprigs of cilantro.",
+      "Drizzle with chili sauce if desired and enjoy warm."
+    ]
+  },
+  {
+    "id": 14,
+    "titleEnglish": "Grilled Pork Skewers",
+    "titleKhmer": "សាច់ជ្រូកអាំងចង្កាក់",
+    "categoryId": "snack",
+    "cookTime": "25 min",
+    "servings": 3,
+    "description": "Charcoal-grilled skewers of pork shoulder steeped in lemongrass kroeung and palm sugar marinade.",
+    "image": "/images/recipes/sach-ang.jpg",
+    "ingredients": [
+      "500g pork collar, sliced into strips",
+      "2 tbsp yellow kroeung paste",
+      "2 tbsp condensed milk or coconut cream",
+      "1 tbsp oyster sauce",
+      "1 tbsp palm sugar",
+      "Bamboo skewers, soaked in water"
+    ],
+    "instructions": [
+      "Marinate pork strips with kroeung paste, condensed milk, oyster sauce, and palm sugar for 1 hour.",
+      "Thread marinated pork onto soaked bamboo skewers.",
+      "Grill over hot charcoal for 8 to 10 minutes, basting with remaining marinade until golden and smoky.",
+      "Serve hot with pickled cabbage and sliced baguette."
+    ]
+  },
+  {
+    "id": 15,
+    "titleEnglish": "Fried Tofu with Chives",
+    "titleKhmer": "ឆាផ្កាគូឆាយតៅហ៊ូ",
+    "categoryId": "snack",
+    "cookTime": "15 min",
+    "servings": 2,
+    "description": "Crisp golden tofu cubes wok-tossed with fresh garlic chives, light soy sauce, and Kampot white pepper.",
+    "image": "/images/recipes/cha-kuchay.jpg",
+    "ingredients": [
+      "300g firm tofu, cut into bite-sized cubes",
+      "1 bunch Chinese garlic chives, cut into 2-inch pieces",
+      "3 cloves garlic, sliced",
+      "1 tbsp light soy sauce",
+      "0.5 tsp sugar",
+      "Kampot white pepper"
+    ],
+    "instructions": [
+      "Deep-fry tofu cubes in hot oil until puffed and crisp on all sides, then drain.",
+      "In a wok, heat 1 tbsp oil, fry garlic slices until aromatic.",
+      "Add garlic chives and fried tofu cubes, tossing quickly over high heat.",
+      "Season with soy sauce, sugar, and white pepper, then serve hot."
+    ]
+  },
+  {
+    "id": 16,
+    "titleEnglish": "Kuy Teav",
+    "titleKhmer": "គុយទាវ",
+    "categoryId": "soup",
+    "cookTime": "50 min",
+    "servings": 4,
+    "description": "Classic Cambodian pork and dried squid broth poured over soft rice noodles, sliced meats, fried garlic, and herbs.",
+    "image": "/images/recipes/kuyteav.jpg",
+    "ingredients": [
+      "400g fresh thin rice noodles (Kuy Teav)",
+      "500g pork bones for broth",
+      "2 pieces dried squid, lightly toasted",
+      "200g sliced pork loin and ground pork",
+      "Golden crispy fried garlic and garlic oil",
+      "Bean sprouts, scallions, cilantro, and lime wedges"
+    ],
+    "instructions": [
+      "Simmer pork bones, toasted dried squid, and daikon in water for at least 1.5 hours to produce a sweet, clear broth.",
+      "Quickly blanch rice noodles and bean sprouts in boiling water and place into serving bowls.",
+      "Top noodles with poached pork slices and seasoned ground pork.",
+      "Ladle piping hot savory broth over the noodles, finishing with fragrant garlic oil, scallions, and pepper."
+    ]
+  },
+  {
+    "id": 17,
+    "titleEnglish": "Num Ansom",
+    "titleKhmer": "នំអន្សម",
+    "categoryId": "dessert",
+    "cookTime": "90 min",
+    "servings": 6,
+    "description": "Traditional Cambodian sticky rice cake filled with sweet banana or seasoned pork and mung beans, tightly wrapped in banana leaves and boiled.",
+    "image": "/images/recipes/Ansom.jpg",
+    "ingredients": [
+      "500g glutinous sticky rice",
+      "6 ripe baby bananas (Chek Namva)",
+      "1 cup yellow split mung beans, soaked",
+      "Banana leaves and string for wrapping",
+      "1 cup coconut milk",
+      "1 tsp salt",
+      "2 tbsp palm sugar"
+    ],
+    "instructions": [
+      "Season washed sticky rice with coconut milk, sugar, and salt.",
+      "Lay out prepared banana leaves, spread sticky rice evenly, place ripe banana in the center, and wrap firmly into cylindrical parcels.",
+      "Tie tightly with bamboo or kitchen string at regular intervals.",
+      "Submerge in a large pot of boiling water and cook for 1.5 to 2 hours until tender and fragrant."
+    ]
+  },
+  {
+    "id": 18,
+    "titleEnglish": "Prahok Ktis",
+    "titleKhmer": "ប្រហុកខ្ទិះ",
+    "categoryId": "rice",
+    "cookTime": "35 min",
+    "servings": 4,
+    "description": "A savory, aromatic dip made with minced pork, fermented fish (prahok), pea eggplants, and coconut milk, served with crisp fresh garden vegetables.",
+    "image": "/images/recipes/Prahok.jpg",
+    "ingredients": [
+      "250g minced pork with belly",
+      "2 tbsp fermented fish paste (prahok), finely minced",
+      "2 tbsp yellow kroeung paste",
+      "1.5 cups thick coconut cream",
+      "0.5 cup pea eggplants (Trob Gnu)",
+      "1 tbsp palm sugar",
+      "Fresh cucumber slices, long beans, and cabbage for serving"
+    ],
+    "instructions": [
+      "Heat coconut cream in a pan over medium heat until fragrant oil begins to separate.",
+      "Add yellow kroeung paste and minced prahok, frying until deeply aromatic.",
+      "Stir in minced pork and cook until no longer pink, then add palm sugar and tamarind to balance the flavors.",
+      "Add pea eggplants and simmer for 5 minutes. Serve warm with an abundant platter of fresh raw vegetables."
+    ]
+  }
+]

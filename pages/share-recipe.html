@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="km" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Your Family Recipe — ក្បួនម្ហូប</title>
+    <meta name="description" content="Help preserve Cambodian culinary heritage by sharing your favorite traditional dish.">
+    <meta name="keywords" content="Khmer recipe, Cambodian food, share recipe, cooking Khmer, Kbuon Mhoub">
+    <meta property="og:title" content="Share Your Family Recipe — ក្បួនម្ហូប">
+    <meta property="og:description" content="Help preserve Cambodian culinary heritage by sharing your favorite traditional dish.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/images/recipes/Fish-amok.webp">
+    <link rel="icon" type="image/png" href="/images/logo-sq.png">
+    <link rel="apple-touch-icon" href="/images/logo-sq.png">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="flex flex-col min-h-screen">
+    <header class="border-b border-border-subtle bg-bg-elevated -mx-[50px] px-[50px] max-md:-mx-4 max-md:px-4 sticky top-0 z-50 backdrop-blur-md bg-opacity-95">
+        <div class="h-24 flex items-center justify-between">
+            <a href="/pages/home.html" class="flex items-center shrink-0">
+                <img src="/images/logo.png" alt="ក្បួនម្ហូប" class="h-20 w-auto object-contain" />
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-base">
+                <a href="/pages/home.html" class="hover:text-text-link transition">Home</a>
+                <a href="/pages/recipes.html" class="hover:text-text-link transition">Explore Recipes</a>
+                <a href="/pages/share-recipe.html" class="text-text-link underline underline-offset-4 font-medium">Share Recipe</a>
+                <a href="/pages/about.html" class="hover:text-text-link transition">About</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="/pages/recipes.html" class="size-10 rounded-full border border-border-default bg-bg-card hover:bg-bg-section flex items-center justify-center cursor-pointer transition" aria-label="Search recipes">
+                    <i data-lucide="search" class="size-5"></i>
+                </a>
+                <a href="/pages/favorites.html" class="size-10 rounded-full border border-border-default bg-bg-card hover:bg-bg-section flex items-center justify-center cursor-pointer transition relative" aria-label="Saved favorites">
+                    <i data-lucide="heart" class="size-5"></i>
+                    <span id="favorites-count" class="hidden absolute -top-1 -right-1 size-4 bg-brand-primary text-white text-xs font-bold rounded-full flex items-center justify-center">0</span>
+                </a>
+                <button id="theme-toggle" type="button" class="size-10 rounded-full border border-border-default bg-bg-card hover:bg-bg-section flex items-center justify-center cursor-pointer transition" aria-label="Toggle theme">
+                    <i id="moon-icon" data-lucide="moon" class="size-5"></i>
+                    <i id="sun-icon" data-lucide="sun" class="size-5 hidden"></i>
+                </button>
+                <button id="mobile-menu-toggle" type="button" class="md:hidden size-10 rounded-full border border-border-default bg-bg-card hover:bg-bg-section flex items-center justify-center cursor-pointer transition" aria-label="Toggle navigation menu">
+                    <i data-lucide="menu" class="size-5"></i>
+                </button>
+            </div>
+        </div>
+
+        <nav id="mobile-menu" class="hidden md:hidden py-4 border-t border-border-subtle flex flex-col gap-3 text-base">
+            <a href="/pages/home.html" class="hover:text-text-link transition">Home</a>
+            <a href="/pages/recipes.html" class="hover:text-text-link transition">Explore Recipes</a>
+            <a href="/pages/favorites.html" class="hover:text-text-link transition">Favorites</a>
+            <a href="/pages/share-recipe.html" class="text-text-link underline font-medium">Share Recipe</a>
+            <a href="/pages/about.html" class="hover:text-text-link transition">About</a>
+        </nav>
+    </header>
+
+    <main class="flex-1">
+        <section class="pt-12 pb-12 flex flex-col items-center text-center">
+            <span class="inline-flex items-center justify-center h-9 px-4 rounded-full bg-brand-secondary text-brand-primary text-base font-normal">
+                Community submissions
+            </span>
+            <h1 class="text-5xl font-bold leading-[58px] mt-4 text-text-primary">
+                Share Your Family Recipe
+            </h1>
+            <p class="text-lg leading-7 text-text-secondary mt-3 max-w-2xl mx-auto">
+                Help preserve Cambodian culinary heritage by sharing your favorite traditional dish
+            </p>
+        </section>
+
+        <section class="py-12 bg-bg-section -mx-[50px] px-[50px] max-md:-mx-4 max-md:px-4">
+            <div class="max-w-[720px] mx-auto w-full bg-bg-card rounded-3xl p-8 sm:p-10 border border-border-subtle shadow-sm">
+                <h2 class="text-[28px] font-bold text-text-primary mb-6">
+                    Recipe Submission
+                </h2>
+
+                <div id="recipe-submit-success" class="hidden p-6 rounded-2xl bg-bg-section border border-border-subtle text-center mb-6">
+                    <div class="size-12 rounded-full bg-bg-card text-brand-primary flex items-center justify-center mx-auto mb-3 shadow-xs">
+                        <i data-lucide="check" class="size-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-primary">Recipe shared successfully!</h3>
+                    <p class="text-sm text-text-secondary mt-1">
+                        Thank you for contributing to Cambodian food heritage. Your recipe has been added below.
+                    </p>
+                </div>
+
+                <form id="share-recipe-form" class="flex flex-col gap-6">
+                    <div class="flex flex-col gap-2">
+                        <label for="dish-name-en" class="text-base font-medium text-text-primary">Dish Name (English)</label>
+                        <input
+                            id="dish-name-en"
+                            type="text"
+                            required
+                            placeholder="e.g., Fish Amok"
+                            class="w-full h-14 px-4 rounded-xl border border-border-default bg-[#f8f4ee] dark:bg-bg-page text-base text-text-primary placeholder:text-text-secondary focus:outline-none focus:border-brand-primary shadow-xs transition"
+                        />
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label for="dish-name-km" class="text-base font-medium text-text-primary">Dish Name (Khmer)</label>
+                        <input
+                            id="dish-name-km"
+                            type="text"
+                            required
+                            placeholder="ឧ. អាម៉ុកត្រី"
+                            class="w-full h-14 px-4 rounded-xl border border-border-default bg-[#f8f4ee] dark:bg-bg-page text-base text-text-primary placeholder:text-text-secondary focus:outline-none focus:border-brand-primary shadow-xs transition"
+                        />
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label class="text-base font-medium text-text-primary">Category</label>
+                        <input type="hidden" id="selected-category" value="rice" />
+                        <div class="flex items-center gap-2">
+                            <button
+                                type="button"
+                                data-category="rice"
+                                class="category-pill h-11 px-5 rounded-full bg-brand-primary text-white font-medium text-base transition shadow-sm cursor-pointer"
+                            >
+                                Rice
+                            </button>
+                            <button
+                                type="button"
+                                data-category="dessert"
+                                class="category-pill h-11 px-5 rounded-full bg-bg-card border border-border-default hover:bg-bg-section text-text-primary font-medium text-base transition cursor-pointer"
+                            >
+                                Dessert
+                            </button>
+                            <button
+                                type="button"
+                                data-category="soup"
+                                class="category-pill h-11 px-5 rounded-full bg-bg-card border border-border-default hover:bg-bg-section text-text-primary font-medium text-base transition cursor-pointer"
+                            >
+                                Soup
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label for="cooking-time" class="text-base font-medium text-text-primary">Cooking Time (e.g., 40 min)</label>
+                        <input
+                            id="cooking-time"
+                            type="text"
+                            required
+                            placeholder="e.g., 45 min"
+                            class="w-full h-14 px-4 rounded-xl border border-border-default bg-[#f8f4ee] dark:bg-bg-page text-base text-text-primary placeholder:text-text-secondary focus:outline-none focus:border-brand-primary shadow-xs transition"
+                        />
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label for="ingredients" class="text-base font-medium text-text-primary">Ingredients (one per line)</label>
+                        <textarea
+                            id="ingredients"
+                            required
+                            rows="4"
+                            placeholder="e.g., 2 cups of fresh coconut milk&#10;1 lb of fish fillet&#10;2 stalks of lemongrass"
+                            class="w-full h-28 p-4 rounded-xl border border-border-default bg-[#f8f4ee] dark:bg-bg-page text-base text-text-primary placeholder:text-text-secondary focus:outline-none focus:border-brand-primary resize-none shadow-xs transition"
+                        ></textarea>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label for="cooking-instructions" class="text-base font-medium text-text-primary">Cooking Instructions (step by step)</label>
+                        <textarea
+                            id="cooking-instructions"
+                            required
+                            rows="5"
+                            placeholder="1. Describe how to prepare the ingredients.&#10;2. Add each cooking step in order.&#10;3. Include serving tips or family traditions."
+                            class="w-full h-36 p-4 rounded-xl border border-border-default bg-[#f8f4ee] dark:bg-bg-page text-base text-text-primary placeholder:text-text-secondary focus:outline-none focus:border-brand-primary resize-none shadow-xs transition"
+                        ></textarea>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="w-full h-12 rounded-full bg-brand-primary hover:bg-brand-primary-hover text-white font-medium text-base shadow-sm flex items-center justify-center cursor-pointer transition mt-2"
+                    >
+                        Share Recipe
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="py-12">
+            <div>
+                <h2 class="text-4xl font-bold text-text-primary leading-tight">
+                    Recently Shared by Community
+                </h2>
+                <p class="text-base text-text-secondary mt-2">
+                    Illustrative community examples · Traditional dishes to inspire your submission
+                </p>
+            </div>
+
+            <div id="community-recipes-grid" class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8"></div>
+        </section>
+    </main>
+
+    <footer class="w-full mt-auto mb-8 md:mb-12 rounded-2xl md:rounded-3xl bg-bg-section p-6 sm:p-8 md:p-10">
+        <div class="flex flex-col gap-6 md:gap-8">
+            <div class="flex items-start justify-between">
+                <a href="/pages/home.html" class="inline-block">
+                    <img src="/images/logo.png" alt="ក្បួនម្ហូប" class="h-20 w-auto object-contain" />
+                </a>
+
+                <div class="hidden md:flex flex-col items-center gap-3">
+                    <span class="text-base font-semibold tracking-wider text-text-secondary uppercase">FOLLOW US</span>
+                    <div class="flex items-center gap-6 text-text-primary">
+                        <a href="https://web.facebook.com/rotana.karatestk" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="hover:text-brand-primary transition">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/rotanaeav567/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hover:text-brand-primary transition">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@rotanaeav" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="hover:text-brand-primary transition">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@rotanaeav" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="hover:text-brand-primary transition">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.896 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.104 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5l6-3.5-6-3.5v7z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:hidden gap-4 sm:gap-6 items-start">
+                <div class="flex flex-col gap-2.5 text-sm font-medium text-text-primary">
+                    <div class="flex items-center gap-4">
+                        <a href="/pages/home.html" class="hover:text-text-link transition">Home</a>
+                        <a href="/pages/recipes.html" class="hover:text-text-link transition">Explore</a>
+                    </div>
+                    <a href="/pages/favorites.html" class="hover:text-text-link transition">Favorites</a>
+                    <a href="/pages/share-recipe.html" class="hover:text-text-link transition">Share Recipe</a>
+                    <a href="/pages/about.html" class="hover:text-text-link transition">About</a>
+                </div>
+
+                <div class="flex flex-col items-start gap-3">
+                    <span class="text-base font-semibold tracking-wider text-text-secondary uppercase">FOLLOW US</span>
+                    <div class="flex items-center gap-4 text-text-primary">
+                        <a href="https://web.facebook.com/rotana.karatestk" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="hover:text-brand-primary transition">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/rotanaeav567/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hover:text-brand-primary transition">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@rotanaeav" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="hover:text-brand-primary transition">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@rotanaeav" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="hover:text-brand-primary transition">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.896 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.104 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5l6-3.5-6-3.5v7z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-xs text-text-secondary mt-2 leading-relaxed">
+                        © 2026 ក្បួនម្ហូប. All<br />rights reserved.
+                    </p>
+                </div>
+            </div>
+
+            <div class="hidden md:flex flex-col gap-3">
+                <div class="flex flex-wrap items-center gap-7 text-sm md:text-base font-medium text-text-primary">
+                    <a href="/pages/home.html" class="hover:text-text-link transition">Home</a>
+                    <a href="/pages/recipes.html" class="hover:text-text-link transition">Explore</a>
+                    <a href="/pages/favorites.html" class="hover:text-text-link transition">Favorites</a>
+                    <a href="/pages/share-recipe.html" class="hover:text-text-link transition">Share Recipe</a>
+                    <a href="/pages/about.html" class="hover:text-text-link transition">About</a>
+                </div>
+                <p class="text-xs md:text-sm text-text-secondary">© 2026 ក្បួនម្ហូប. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/share-recipe.ts"></script>
+</body>
+</html>

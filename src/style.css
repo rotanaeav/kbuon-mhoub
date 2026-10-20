@@ -77,6 +77,10 @@
   --color-border-subtle: #e8ded4;
   --color-badge-fill: #eee4d8;
   --color-badge-text: #875c3b;
+  --color-foreground: #2e241f;
+  --color-surface-1: #eee4d8;
+  --color-muted-hover: #eee4d8;
+  --color-muted-focus: #e8ded4;
 }
 
 :root {
@@ -92,6 +96,10 @@
   --color-brand-secondary: #eee4d8;
   --color-border-default: #ddd0c4;
   --color-border-subtle: #e8ded4;
+  --color-foreground: #2e241f;
+  --color-surface-1: #eee4d8;
+  --color-muted-hover: #eee4d8;
+  --color-muted-focus: #e8ded4;
 }
 
 .dark {
@@ -107,6 +115,10 @@
   --color-brand-secondary: #332b24;
   --color-border-default: #3d342d;
   --color-border-subtle: #332b25;
+  --color-foreground: #f5eee7;
+  --color-surface-1: #332b24;
+  --color-muted-hover: #231e1a;
+  --color-muted-focus: #332b25;
 }
 
 body {
@@ -115,4 +127,25 @@ body {
   color: var(--color-text-primary);
   min-height: 100vh;
   padding: 0 50px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0 16px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

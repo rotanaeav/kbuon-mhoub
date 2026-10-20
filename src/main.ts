@@ -21,7 +21,6 @@ import {
   Plus
 } from "lucide";
 
-// Initialize targeted icons for optimal bundle size
 createIcons({
   icons: {
     Search,

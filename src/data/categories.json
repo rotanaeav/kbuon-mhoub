@@ -1,0 +1,38 @@
+[
+  {
+    "id": "all",
+    "name": "All",
+    "nameKhmer": "ទាំងអស់",
+    "icon": "utensils"
+  },
+  {
+    "id": "rice",
+    "name": "Rice",
+    "nameKhmer": "បាយ",
+    "icon": "cooking-pot"
+  },
+  {
+    "id": "khmer",
+    "name": "Khmer",
+    "nameKhmer": "ខ្មែរ",
+    "icon": "chef-hat"
+  },
+  {
+    "id": "soup",
+    "name": "Soup",
+    "nameKhmer": "សម្ល",
+    "icon": "soup"
+  },
+  {
+    "id": "snack",
+    "name": "Snack",
+    "nameKhmer": "អាហារសម្រន់",
+    "icon": "flame"
+  },
+  {
+    "id": "dessert",
+    "name": "Dessert",
+    "nameKhmer": "បង្អែម",
+    "icon": "cake"
+  }
+]
