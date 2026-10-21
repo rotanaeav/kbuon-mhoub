@@ -19,19 +19,15 @@ import {
 } from "lucide";
 
 import recipesData from "./data/recipes.json";
+import categoriesData from "./data/categories.json";
 import type { Recipe } from "./types/recipe";
 
 const allRecipes = recipesData as Recipe[];
 const recipeMap = new Map<number, Recipe>(allRecipes.map((r) => [r.id, r]));
 
-const categoryLabels: Record<string, string> = {
-  all: "All",
-  rice: "Rice",
-  dessert: "Dessert",
-  soup: "Soup",
-  khmer: "Rice",
-  snack: "Snack"
-};
+function getCategoryName(id: string): string {
+  return categoriesData.find((c) => c.id === id)?.name ?? "Default";
+}
 
 function initIcons(): void {
   createIcons({
@@ -153,7 +149,7 @@ function renderSavedRecipes(): void {
   }
 
   container.innerHTML = savedRecipes.map((recipe) => {
-    const catName = categoryLabels[recipe.categoryId] ?? "Rice";
+    const catName = getCategoryName(recipe.categoryId);
     return `
       <article class="relative group w-full bg-bg-card border border-border-subtle rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] hover:border-border-default transition-all duration-300 flex flex-col">
         <div class="aspect-[4/3] w-full relative overflow-hidden bg-bg-section">
@@ -196,7 +192,7 @@ function renderRecommendedRecipes(): void {
 
   container.innerHTML = recRecipes.map((recipe) => {
     const isFav = favIds.includes(recipe.id);
-    const catName = categoryLabels[recipe.categoryId] ?? "Rice";
+    const catName = getCategoryName(recipe.categoryId);
     return `
       <article class="relative group w-full bg-bg-card border border-border-subtle rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] hover:border-border-default transition-all duration-300 flex flex-col">
         <div class="aspect-[4/3] w-full relative overflow-hidden bg-bg-section">

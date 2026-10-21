@@ -142,7 +142,7 @@ function renderPopularRecipes(): void {
   const categoryMap = new Map(categories.map((c) => [c.id, c.name]));
 
   container.innerHTML = popular.map((recipe) => {
-    const catName = categoryMap.get(recipe.categoryId) ?? "Khmer";
+    const catName = categoryMap.get(recipe.categoryId) ?? "Default";
     return `
       <article class="relative group w-full bg-bg-card border border-border-subtle rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] hover:border-border-default transition-all duration-300 flex flex-col">
         <div class="aspect-[4/3] w-full relative overflow-hidden bg-bg-section">

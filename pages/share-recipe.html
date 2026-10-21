@@ -110,29 +110,7 @@
                     <div class="flex flex-col gap-2">
                         <label class="text-base font-medium text-text-primary">Category</label>
                         <input type="hidden" id="selected-category" value="rice" />
-                        <div class="flex items-center gap-2">
-                            <button
-                                type="button"
-                                data-category="rice"
-                                class="category-pill h-11 px-5 rounded-full bg-brand-primary text-white font-medium text-base transition shadow-sm cursor-pointer"
-                            >
-                                Rice
-                            </button>
-                            <button
-                                type="button"
-                                data-category="dessert"
-                                class="category-pill h-11 px-5 rounded-full bg-bg-card border border-border-default hover:bg-bg-section text-text-primary font-medium text-base transition cursor-pointer"
-                            >
-                                Dessert
-                            </button>
-                            <button
-                                type="button"
-                                data-category="soup"
-                                class="category-pill h-11 px-5 rounded-full bg-bg-card border border-border-default hover:bg-bg-section text-text-primary font-medium text-base transition cursor-pointer"
-                            >
-                                Soup
-                            </button>
-                        </div>
+                        <div id="category-pills-container" class="flex flex-wrap items-center gap-2"></div>
                     </div>
 
                     <div class="flex flex-col gap-2">

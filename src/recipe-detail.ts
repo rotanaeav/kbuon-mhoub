@@ -180,7 +180,7 @@ function getCurrentRecipe(): { recipe: Recipe; isCommunity: boolean } {
 function renderRecipeDetail(): void {
   const { recipe, isCommunity } = getCurrentRecipe();
   const cat = categoryMap.get(recipe.categoryId);
-  const catName = cat?.name ?? (recipe.categoryId.charAt(0).toUpperCase() + recipe.categoryId.slice(1));
+  const catName = cat?.name ?? "Default";
   const catKhmer = cat?.nameKhmer ?? "";
 
   document.title = `${recipe.titleEnglish} — ក្បួនម្ហូប`;

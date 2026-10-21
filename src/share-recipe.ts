@@ -11,6 +11,7 @@ import {
 } from "lucide";
 
 import communityRecipesData from "./data/community-recipes.json";
+import categoriesData from "./data/categories.json";
 
 type CommunityRecipe = {
   id: number;
@@ -26,13 +27,9 @@ type CommunityRecipe = {
   instructions?: string[];
 };
 
-const categoryNames: Record<string, string> = {
-  rice: "Rice",
-  dessert: "Dessert",
-  soup: "Soup",
-  khmer: "Khmer",
-  snack: "Snack"
-};
+function getCategoryName(id: string): string {
+  return categoriesData.find((c) => c.id === id)?.name ?? "Default";
+}
 
 function initIcons(): void {
   createIcons({
@@ -130,19 +127,37 @@ function updateFavoriteButtonsUI(): void {
 }
 
 function initCategoryPills(): void {
-  const pills = document.querySelectorAll<HTMLButtonElement>(".category-pill");
+  const container = document.getElementById("category-pills-container");
   const hiddenInput = document.getElementById("selected-category") as HTMLInputElement | null;
+  if (!container) return;
 
+  const selectableCategories = categoriesData.filter((c) => c.id !== "all");
+  const currentSelected = hiddenInput?.value || selectableCategories[0]?.id || "rice";
+  if (hiddenInput) hiddenInput.value = currentSelected;
+
+  container.innerHTML = selectableCategories
+    .map((cat) => {
+      const isSelected = cat.id === currentSelected;
+      const btnClass = isSelected
+        ? "category-pill h-11 px-5 rounded-full bg-brand-primary text-white font-medium text-base transition shadow-sm cursor-pointer"
+        : "category-pill h-11 px-5 rounded-full bg-bg-card border border-border-default hover:bg-bg-section text-text-primary font-medium text-base transition cursor-pointer";
+      return `<button type="button" data-category="${cat.id}" class="${btnClass}">${cat.name}</button>`;
+    })
+    .join("");
+
+  const pills = container.querySelectorAll<HTMLButtonElement>(".category-pill");
   pills.forEach((pill) => {
     pill.addEventListener("click", () => {
       const cat = pill.getAttribute("data-category") || "rice";
       if (hiddenInput) hiddenInput.value = cat;
 
       pills.forEach((p) => {
-        p.className = "category-pill h-11 px-5 rounded-full bg-bg-card border border-border-default hover:bg-bg-section text-text-primary font-medium text-base transition cursor-pointer";
+        p.className =
+          "category-pill h-11 px-5 rounded-full bg-bg-card border border-border-default hover:bg-bg-section text-text-primary font-medium text-base transition cursor-pointer";
       });
 
-      pill.className = "category-pill h-11 px-5 rounded-full bg-brand-primary text-white font-medium text-base transition shadow-sm cursor-pointer";
+      pill.className =
+        "category-pill h-11 px-5 rounded-full bg-brand-primary text-white font-medium text-base transition shadow-sm cursor-pointer";
     });
   });
 }
@@ -218,7 +233,7 @@ function initForm(): void {
     const titleEn = (document.getElementById("dish-name-en") as HTMLInputElement).value.trim();
     const titleKm = (document.getElementById("dish-name-km") as HTMLInputElement).value.trim();
     const category = ((document.getElementById("selected-category") as HTMLInputElement)?.value || "rice");
-    const categoryName = categoryNames[category] || "Rice";
+    const categoryName = getCategoryName(category);
     const cookTime = (document.getElementById("cooking-time") as HTMLInputElement).value.trim() || "40 min";
     const ingredientsRaw = (document.getElementById("ingredients") as HTMLTextAreaElement).value.trim();
     const instructionsRaw = (document.getElementById("cooking-instructions") as HTMLTextAreaElement).value.trim();

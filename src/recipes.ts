@@ -26,7 +26,7 @@ import type { Recipe } from "./types/recipe";
 const allRecipes = recipesData as Recipe[];
 
 function getCategoryName(id: string): string {
-  return categoriesData.find((cat) => cat.id === id)?.name ?? id;
+  return categoriesData.find((cat) => cat.id === id)?.name ?? "Default";
 }
 
 let currentCategory: string = "all";
@@ -358,7 +358,20 @@ function updateFilterButtonsUI(): void {
 }
 
 function initCategoryFilters(): void {
-  document.querySelectorAll<HTMLButtonElement>("[data-category-filter]").forEach((btn) => {
+  const container = document.getElementById("category-filter-list");
+  if (!container) return;
+
+  container.innerHTML = categoriesData
+    .map((cat) => {
+      const isActive = !filterOnlyFavorites && cat.id === currentCategory;
+      const btnClass = isActive
+        ? "h-11 px-5 rounded-full bg-brand-primary text-white font-medium text-base transition shadow-sm cursor-pointer shrink-0 flex items-center justify-center"
+        : "h-11 px-5 rounded-full bg-bg-card border border-border-default hover:bg-bg-section text-text-primary font-medium text-base transition cursor-pointer shrink-0 flex items-center justify-center";
+      return `<button type="button" data-category-filter="${cat.id}" class="${btnClass}">${cat.name}</button>`;
+    })
+    .join("");
+
+  container.querySelectorAll<HTMLButtonElement>("[data-category-filter]").forEach((btn) => {
     btn.addEventListener("click", () => {
       const cat = btn.getAttribute("data-category-filter") || "all";
       filterOnlyFavorites = false;
